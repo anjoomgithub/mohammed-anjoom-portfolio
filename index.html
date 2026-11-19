@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mohammed Anjoom V — IT Support Engineer in Abu Dhabi, UAE. Level 1 IT helpdesk support, Windows/Linux systems, TCP/IP networking, Python, and database troubleshooting.">
+    <title>Mohammed Anjoom V | IT Support Engineer — Abu Dhabi, UAE</title>
+
+    <!-- Google Fonts: Inter (Clean UI & Body) & JetBrains Mono (Tech Tags & Background Keywords) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Techy Color & Typography Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+                    },
+                    colors: {
+                        obsidian: '#050A14',
+                        panel: '#0D1526',
+                        techCyan: '#22D3EE',
+                        techCyanDeep: '#06B6D4',
+                        techEmerald: '#10B981',
+                        techIndigo: '#818CF8',
+                        inkPrimary: '#F8FAFC',
+                        inkBody: '#CBD5E1',
+                        inkMuted: '#94A3B8',
+                    }
+                }
+            }
+        };
+    </script>
+
+    <!-- Techy Dark Infrastructure Styles: Ambient Glows, Blueprint Grid, Glass Cards & Print PDF Layout -->
+    <style>
+        /* Base dark obsidian canvas with soft radial tech glows */
+        body {
+            background-color: #050A14;
+            color: #CBD5E1;
+            background-image:
+                radial-gradient(circle at 15% 12%, rgba(6, 182, 212, 0.09) 0%, transparent 42%),
+                radial-gradient(circle at 85% 28%, rgba(16, 185, 129, 0.065) 0%, transparent 40%),
+                radial-gradient(circle at 50% 85%, rgba(129, 140, 248, 0.06) 0%, transparent 48%);
+            background-attachment: fixed;
+            line-height: 1.65;
+        }
+
+        /* Very faint fixed blueprint grid texture overlay */
+        .blueprint-grid {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(to right, rgba(56, 189, 248, 0.035) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(56, 189, 248, 0.035) 1px, transparent 1px);
+            background-size: 48px 48px;
+        }
+
+        /* Always-on full-viewport technical keywords background canvas */
+        #tech-bg-canvas {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            display: block;
+        }
+
+        /* Elevated Glassmorphic Tech Cards */
+        .tech-card {
+            background-color: rgba(13, 21, 38, 0.82);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(56, 189, 248, 0.16);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.28);
+            transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+        }
+
+        .tech-card:hover {
+            border-color: rgba(34, 211, 238, 0.42);
+            box-shadow: 0 10px 36px rgba(6, 182, 212, 0.10), 0 8px 24px rgba(0, 0, 0, 0.35);
+        }
+
+        /* Subtle pulsing green status dot */
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.65);
+            }
+
+            50% {
+                box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+            }
+        }
+
+        .status-dot {
+            animation: pulseGlow 2.4s infinite;
+        }
+
+        /* Optional headshot image class when user drops in photo.jpg */
+        .avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Gentle scroll reveal for sections */
+        .reveal {
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Clean, High-Contrast Print / Save PDF Styling */
+        @media print {
+
+            #tech-bg-canvas,
+            .blueprint-grid,
+            header,
+            .no-print,
+            #toast-container {
+                display: none !important;
+            }
+
+            body {
+                background: #FFFFFF !important;
+                background-image: none !important;
+                color: #1E293B !important;
+                font-size: 12pt;
+            }
+
+            .tech-card {
+                background: #FFFFFF !important;
+                backdrop-filter: none !important;
+                box-shadow: none !important;
+                border: 1px solid #CBD5E1 !important;
+                color: #1E293B !important;
+                break-inside: avoid;
+            }
+
+            h1,
+            h2,
+            h3,
+            .text-inkPrimary,
+            .text-white {
+                color: #0F172A !important;
+            }
+
+            p,
+            li,
+            span,
+            a,
+            .text-inkBody,
+            .text-inkMuted {
+                color: #334155 !important;
+            }
+
+            .text-techCyan,
+            .text-techEmerald {
+                color: #0F766E !important;
+            }
+
+            .print-pill {
+                background: #F1F5F9 !important;
+                border-color: #CBD5E1 !important;
+                color: #0F172A !important;
+            }
+
+            section {
+                padding-top: 14px !important;
+                padding-bottom: 14px !important;
+            }
+
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body id="top"
+    class="bg-obsidian text-inkBody font-sans antialiased selection:bg-techCyan/25 selection:text-inkPrimary overflow-x-hidden">
+
+    <!-- =========================================================
+         FIXED BACKGROUND LAYERS: FAINT GRID + FLOATING TECH WORDS
+    ========================================================== -->
+    <div class="blueprint-grid" aria-hidden="true"></div>
+    <canvas id="tech-bg-canvas" aria-hidden="true"></canvas>
+
+    <!-- =========================================================
+         STICKY TRANSLUCENT DARK GLASS NAVIGATION BAR
+    ========================================================== -->
+    <header class="sticky top-0 z-30 w-full bg-obsidian/85 backdrop-blur-md border-b border-sky-400/15">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand Identity -->
+                <a href="#top" class="flex items-center gap-3 group focus:outline-none">
+                    <span
+                        class="w-9 h-9 rounded-lg bg-panel border border-techCyan/50 text-techCyan font-mono text-xs font-bold flex items-center justify-center shadow-[0_0_14px_rgba(34,211,238,0.18)] group-hover:border-techCyan transition-colors">
+                        MA
+                    </span>
+                    <div class="leading-tight">
+                        <span
+                            class="block font-bold text-inkPrimary text-sm sm:text-base tracking-tight group-hover:text-techCyan transition-colors">
+                            Mohammed Anjoom V
+                        </span>
+                        <span class="block font-mono text-[11px] text-inkMuted">
+                            IT Support Engineer
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-1" aria-label="Primary Navigation">
+                    <a href="#about"
+                        class="px-3 py-2 rounded-lg text-sm font-medium text-inkBody hover:text-techCyan hover:bg-techCyan/10 transition-colors">About</a>
+                    <a href="#experience"
+                        class="px-3 py-2 rounded-lg text-sm font-medium text-inkBody hover:text-techCyan hover:bg-techCyan/10 transition-colors">Experience</a>
+                    <a href="#skills"
+                        class="px-3 py-2 rounded-lg text-sm font-medium text-inkBody hover:text-techCyan hover:bg-techCyan/10 transition-colors">Skills</a>
+                    <a href="#projects"
+                        class="px-3 py-2 rounded-lg text-sm font-medium text-inkBody hover:text-techCyan hover:bg-techCyan/10 transition-colors">Projects</a>
+                    <a href="#credentials"
+                        class="px-3 py-2 rounded-lg text-sm font-medium text-inkBody hover:text-techCyan hover:bg-techCyan/10 transition-colors">Credentials</a>
+                    <a href="#contact"
+                        class="px-3 py-2 rounded-lg text-sm font-medium text-inkBody hover:text-techCyan hover:bg-techCyan/10 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Right Action Buttons + Mobile Hamburger -->
+                <div class="flex items-center gap-2">
+                    <button type="button" onclick="window.print()"
+                        class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold text-inkBody hover:text-inkPrimary bg-panel/90 hover:bg-slate-800 border border-sky-400/20 hover:border-techCyan/40 transition-colors">
+                        <svg class="w-3.5 h-3.5 text-techCyan" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z">
+                            </path>
+                        </svg>
+                        <span>Print / Save PDF</span>
+                    </button>
+
+                    <a href="./Mohammed_Anjoom_CV.pdf" download="Mohammed_Anjoom_V_IT_Support_CV.pdf"
+                        class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold text-techCyan bg-techCyan/15 hover:bg-techCyan/25 border border-techCyan/40 transition-colors whitespace-nowrap">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4">
+                            </path>
+                        </svg>
+                        <span>Download CV</span>
+                    </a>
+
+                    <a href="#contact"
+                        class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold text-obsidian bg-techCyan hover:bg-cyan-300 shadow-[0_0_16px_rgba(34,211,238,0.28)] transition-colors">
+                        <span>Hire / Contact</span>
+                    </a>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false"
+                        class="lg:hidden p-2 rounded-lg border border-sky-400/25 bg-panel text-inkPrimary hover:border-techCyan transition-colors">
+                        <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                        <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-sky-400/15 bg-obsidian/95 backdrop-blur-lg">
+            <nav class="px-4 py-3 space-y-1">
+                <a href="#about"
+                    class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-inkBody hover:bg-techCyan/10 hover:text-techCyan">About</a>
+                <a href="#experience"
+                    class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-inkBody hover:bg-techCyan/10 hover:text-techCyan">Experience</a>
+                <a href="#skills"
+                    class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-inkBody hover:bg-techCyan/10 hover:text-techCyan">Skills</a>
+                <a href="#projects"
+                    class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-inkBody hover:bg-techCyan/10 hover:text-techCyan">Projects</a>
+                <a href="#credentials"
+                    class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-inkBody hover:bg-techCyan/10 hover:text-techCyan">Credentials</a>
+                <a href="#contact"
+                    class="mobile-link block px-3 py-2.5 rounded-lg text-sm font-medium text-inkBody hover:bg-techCyan/10 hover:text-techCyan">Contact</a>
+                <div class="pt-2 grid grid-cols-2 gap-2">
+                    <button type="button" onclick="window.print()"
+                        class="py-2.5 px-3 rounded-lg text-xs font-semibold text-inkPrimary bg-panel border border-sky-400/25">
+                        Print / Save PDF
+                    </button>
+                    <a href="#contact"
+                        class="mobile-link py-2.5 px-3 rounded-lg text-xs font-bold text-center text-obsidian bg-techCyan">
+                        Hire / Contact
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- =========================================================
+         FOREGROUND MAIN CONTENT (Z-10 ABOVE CANVAS)
+    ========================================================== -->
+    <main class="relative z-10">
+
+        <!-- =====================================================
+             1. HERO SECTION
+        ====================================================== -->
+        <section class="pt-10 pb-10 sm:pt-14 sm:pb-12">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="tech-card rounded-2xl p-6 sm:p-10 reveal">
+                    <div class="flex flex-col md:flex-row md:items-start gap-7 md:gap-9">
+
+                        <!-- Stylized Avatar Container (Monogram + Easy Headshot Swap) -->
+                        <!-- Stylized Avatar Container -->
+                        <div class="shrink-0 flex md:block justify-center">
+                            <div
+                                class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-slate-900 via-panel to-slate-900 border-2 border-techCyan/50 shadow-[0_0_24px_rgba(34,211,238,0.18)] flex items-center justify-center overflow-hidden">
+                                <img src="./photo.jpg" alt="Mohammed Anjoom V"
+                                    class="avatar-img w-full h-full object-cover object-top" />
+                            </div>
+                        </div>
+
+                        <!-- Identity, Value Proposition & Working Action Buttons -->
+                        <div class="flex-1 text-center md:text-left space-y-4">
+                            <!-- Availability Status Pill with Glowing Terminal Emerald Dot -->
+                            <div
+                                class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-techEmerald/10 border border-techEmerald/35 text-techEmerald font-mono text-xs font-medium print-pill">
+                                <span class="w-2 h-2 rounded-full bg-techEmerald status-dot"></span>
+                                <span>Available Immediately • Abu Dhabi, UAE • Visit Visa</span>
+                            </div>
+
+                            <!-- Name & Role -->
+                            <div>
+                                <h1
+                                    class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold tracking-tight text-inkPrimary leading-tight">
+                                    Mohammed Anjoom V
+                                </h1>
+                                <p class="mt-1.5 text-lg sm:text-xl font-semibold text-techCyan font-mono">
+                                    &gt;_ IT Support Engineer
+                                </p>
+                            </div>
+
+                            <!-- Concise Value Proposition -->
+                            <p class="text-base text-inkBody leading-relaxed max-w-3xl">
+                                IT Support Engineer with progressive career development from software development
+                                internship to technical support specialization. Transitioned hands-on Python full stack
+                                experience into comprehensive IT support expertise covering system troubleshooting,
+                                helpdesk operations, Windows/Linux systems, database maintenance, and network
+                                fundamentals—ready to contribute immediately in the UAE.
+                            </p>
+
+                            <!-- Primary Working Contact Buttons -->
+                            <div
+                                class="flex flex-wrap items-center justify-center md:justify-start gap-2.5 pt-2 no-print">
+                                <!-- Email Me -->
+                                <a href="mailto:anjoomvkkl@gmail.com?subject=IT%20Support%20Engineer%20Opportunity%20-%20Mohammed%20Anjoom%20V"
+                                    class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold text-obsidian bg-techCyan hover:bg-cyan-300 shadow-[0_0_18px_rgba(34,211,238,0.28)] transition-all">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg>
+                                    <span>Email Me</span>
+                                </a>
+
+                                <!-- WhatsApp -->
+                                <a href="https://wa.me/971543736442?text=Hello%20Mohammed%2C%20I%20viewed%20your%20IT%20Support%20Engineer%20portfolio%20and%20would%20like%20to%20connect."
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-techEmerald bg-techEmerald/10 hover:bg-techEmerald hover:text-obsidian border border-techEmerald/35 transition-all">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                        </path>
+                                    </svg>
+                                    <span>WhatsApp</span>
+                                </a>
+
+                                <!-- Direct Phone Call -->
+                                <a href="tel:+971543736442"
+                                    class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-inkPrimary bg-slate-900/80 hover:bg-slate-800 border border-sky-400/25 hover:border-techCyan/50 transition-all">
+                                    <svg class="w-4 h-4 text-techCyan" fill="none" stroke="currentColor"
+                                        stroke-width="2" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                        </path>
+                                    </svg>
+                                    <span>Call +971 543736442</span>
+                                </a>
+
+                                <!-- LinkedIn -->
+                                <a href="https://www.linkedin.com/in/mohammed-anjoom-343929229" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-inkPrimary bg-slate-900/80 hover:bg-slate-800 border border-sky-400/25 hover:border-techIndigo/60 transition-all">
+                                    <svg class="w-4 h-4 text-techIndigo" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z">
+                                        </path>
+                                    </svg>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Compact Techy Quick-Facts Strip (4 Clean Cards) -->
+                    <div
+                        class="mt-8 pt-6 border-t border-sky-400/15 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+                        <div class="p-4 rounded-xl bg-obsidian/70 border border-sky-400/15">
+                            <p class="font-mono text-[11px] uppercase tracking-wider text-techCyan">Location</p>
+                            <p class="text-sm font-semibold text-inkPrimary mt-1">Abu Dhabi, UAE</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-obsidian/70 border border-sky-400/15">
+                            <p class="font-mono text-[11px] uppercase tracking-wider text-techCyan">Education</p>
+                            <p class="text-sm font-semibold text-inkPrimary mt-1">BCA (CGPA 9.05) — MOFA Attested</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-obsidian/70 border border-techEmerald/25">
+                            <p class="font-mono text-[11px] uppercase tracking-wider text-techEmerald">Availability</p>
+                            <p class="text-sm font-semibold text-inkPrimary mt-1">Immediate (Visit Visa)</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-obsidian/70 border border-sky-400/15">
+                            <p class="font-mono text-[11px] uppercase tracking-wider text-techIndigo">Languages</p>
+                            <p class="text-sm font-semibold text-inkPrimary mt-1">English (C2), Hindi (C1), Malayalam,
+                                Tamil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             2. ABOUT ME SECTION
+        ====================================================== -->
+        <section id="about" class="py-10 sm:py-12">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-6 reveal">
+                    <p class="font-mono text-xs font-semibold uppercase tracking-widest text-techCyan">01 // Profile
+                        Overview</p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-inkPrimary mt-1">About Me</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                    <!-- Professional Summary Card -->
+                    <div class="lg:col-span-7 tech-card rounded-2xl p-6 sm:p-8 reveal">
+                        <h3 class="text-lg font-bold text-inkPrimary mb-3 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-techCyan"></span>
+                            <span>Bridging Software Engineering &amp; IT Support Operations</span>
+                        </h3>
+                        <p class="text-base text-inkBody leading-relaxed">
+                            IT Support Engineer with progressive career development from software development internship
+                            to technical support specialization. Transitioned hands-on Python full stack experience into
+                            comprehensive IT support expertise, encompassing system troubleshooting, helpdesk
+                            operations, and multi-platform technical assistance.
+                        </p>
+                        <p class="text-base text-inkBody leading-relaxed mt-4">
+                            Demonstrates adaptability and technical depth across application support, Windows/Linux
+                            systems, relational database administration, and network fundamentals. Seeking to leverage
+                            this dual technical background in a challenging IT support role in the UAE.
+                        </p>
+                    </div>
+
+                    <!-- Side Key-Info Card -->
+                    <div class="lg:col-span-5 tech-card rounded-2xl p-6 sm:p-8 reveal">
+                        <h3 class="text-lg font-bold text-inkPrimary mb-4 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-techEmerald"></span>
+                            <span>Candidate Snapshot</span>
+                        </h3>
+                        <dl class="space-y-3 text-sm">
+                            <div class="flex items-center justify-between gap-3 pb-2.5 border-b border-sky-400/10">
+                                <dt class="font-mono text-xs text-inkMuted">Nationality</dt>
+                                <dd class="font-semibold text-inkPrimary">Indian</dd>
+                            </div>
+                            <div class="flex items-center justify-between gap-3 pb-2.5 border-b border-sky-400/10">
+                                <dt class="font-mono text-xs text-inkMuted">Visa Status</dt>
+                                <dd class="font-semibold text-inkPrimary">Visit Visa</dd>
+                            </div>
+                            <div class="flex items-center justify-between gap-3 pb-2.5 border-b border-sky-400/10">
+                                <dt class="font-mono text-xs text-inkMuted">Availability</dt>
+                                <dd class="font-semibold text-techEmerald">Immediate</dd>
+                            </div>
+                            <div class="flex items-center justify-between gap-3 pb-2.5 border-b border-sky-400/10">
+                                <dt class="font-mono text-xs text-inkMuted">Location</dt>
+                                <dd class="font-semibold text-inkPrimary">Abu Dhabi, UAE</dd>
+                            </div>
+                            <div class="flex items-center justify-between gap-3 pb-2.5 border-b border-sky-400/10">
+                                <dt class="font-mono text-xs text-inkMuted">Email</dt>
+                                <dd class="font-mono text-xs sm:text-sm font-medium text-techCyan truncate">
+                                    <a href="mailto:anjoomvkkl@gmail.com"
+                                        class="hover:underline">anjoomvkkl@gmail.com</a>
+                                </dd>
+                            </div>
+                            <div class="flex items-center justify-between gap-3">
+                                <dt class="font-mono text-xs text-inkMuted">Phone</dt>
+                                <dd class="font-mono text-xs sm:text-sm font-medium text-inkPrimary">
+                                    <a href="tel:+971543736442" class="hover:text-techCyan transition-colors">+971
+                                        543736442</a>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             3. PROFESSIONAL EXPERIENCE SECTION (CLEAN TIMELINE)
+        ====================================================== -->
+        <section id="experience" class="py-10 sm:py-12">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-6 reveal">
+                    <p class="font-mono text-xs font-semibold uppercase tracking-widest text-techCyan">02 // Career
+                        Timeline</p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-inkPrimary mt-1">Professional Experience</h2>
+                </div>
+
+                <div
+                    class="relative pl-0 sm:pl-7 space-y-6 before:hidden sm:before:block before:content-[''] before:absolute before:left-2.5 before:top-3 before:bottom-3 before:w-px before:bg-gradient-to-b before:from-techCyan/60 before:via-techEmerald/40 before:to-transparent">
+
+                    <!-- Experience 1: IT Support Engineer -->
+                    <article class="relative tech-card rounded-2xl p-6 sm:p-8 reveal">
+                        <span
+                            class="hidden sm:block absolute -left-[25px] top-8 w-3.5 h-3.5 rounded-full bg-techCyan ring-4 ring-obsidian shadow-[0_0_12px_rgba(34,211,238,0.65)]"></span>
+                        <div
+                            class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-4 border-b border-sky-400/15">
+                            <div>
+                                <h3 class="text-xl font-bold text-inkPrimary">IT Support Engineer</h3>
+                                <p class="text-base font-medium text-techCyan mt-0.5">
+                                    Deccor Aluminium Fabricators <span class="text-inkMuted font-normal">| Kottakkal,
+                                        Kerala</span>
+                                </p>
+                            </div>
+                            <span
+                                class="inline-flex items-center px-3 py-1 rounded-lg bg-techCyan/10 border border-techCyan/30 font-mono text-xs font-semibold text-techCyan self-start print-pill">
+                                Mar 2025 – Sep 2026
+                            </span>
+                        </div>
+                        <ul class="mt-4 space-y-2.5 text-base text-inkBody leading-relaxed">
+                            <li class="flex items-start gap-3">
+                                <span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-techCyan shrink-0"></span>
+                                <span>Provided Level 1 IT support by troubleshooting hardware, software, and
+                                    application-related issues.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-techCyan shrink-0"></span>
+                                <span>Maintained backend systems and resolved application-level technical issues to
+                                    support day-to-day operations.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-techCyan shrink-0"></span>
+                                <span>Worked with databases and supported system performance and backend maintenance
+                                    activities.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-techCyan shrink-0"></span>
+                                <span>Collaborated with internal teams to resolve technical issues and improve IT
+                                    support efficiency.</span>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <!-- Experience 2: Python Full Stack Intern -->
+                    <article class="relative tech-card rounded-2xl p-6 sm:p-8 reveal">
+                        <span
+                            class="hidden sm:block absolute -left-[25px] top-8 w-3.5 h-3.5 rounded-full bg-techEmerald ring-4 ring-obsidian shadow-[0_0_12px_rgba(16,185,129,0.6)]"></span>
+                        <div
+                            class="flex flex-col sm:flex-row sm:items-start justify-between gap-3 pb-4 border-b border-sky-400/15">
+                            <div>
+                                <h3 class="text-xl font-bold text-inkPrimary">Python Full Stack Intern</h3>
+                                <p class="text-base font-medium text-techEmerald mt-0.5">
+                                    Inmakes Infotech Pvt. Ltd. <span class="text-inkMuted font-normal">| Kochi,
+                                        Kerala</span>
+                                </p>
+                            </div>
+                            <span
+                                class="inline-flex items-center px-3 py-1 rounded-lg bg-techEmerald/10 border border-techEmerald/30 font-mono text-xs font-semibold text-techEmerald self-start print-pill">
+                                May 2023 – Aug 2023
+                            </span>
+                        </div>
+                        <ul class="mt-4 space-y-2.5 text-base text-inkBody leading-relaxed">
+                            <li class="flex items-start gap-3">
+                                <span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-techEmerald shrink-0"></span>
+                                <span>Built web applications and applied structured debugging and troubleshooting
+                                    methodologies.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-techEmerald shrink-0"></span>
+                                <span>Assisted in troubleshooting software and database errors.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-techEmerald shrink-0"></span>
+                                <span>Supported application testing and technical issue resolution.</span>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             4. TECHNICAL SKILLS SECTION (4 CATEGORIZED TECH CARDS)
+        ====================================================== -->
+        <section id="skills" class="py-10 sm:py-12">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-6 reveal">
+                    <p class="font-mono text-xs font-semibold uppercase tracking-widest text-techCyan">03 // Tech Stack
+                        &amp; Capabilities</p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-inkPrimary mt-1">Technical Skills</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <!-- Category 1: IT Support & Helpdesk -->
+                    <div class="tech-card rounded-2xl p-6 reveal">
+                        <h3 class="text-lg font-bold text-inkPrimary mb-4 flex items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-techCyan"></span>
+                            <span>IT Support &amp; Helpdesk</span>
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">IT
+                                Helpdesk Support</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">Incident
+                                &amp; Ticket Management</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">Ticket
+                                Management Systems</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">Remote
+                                Desktop Support</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">Hardware
+                                Troubleshooting</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">Software
+                                Installation &amp; Configuration</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">Microsoft
+                                Office Support</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">MS
+                                Office (Word, Excel, PowerPoint)</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">User
+                                Support &amp; Customer Service</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">Technical
+                                Documentation</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Systems & Networking -->
+                    <div class="tech-card rounded-2xl p-6 reveal">
+                        <h3 class="text-lg font-bold text-inkPrimary mb-4 flex items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-techEmerald"></span>
+                            <span>Systems &amp; Networking</span>
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-techEmerald/25 text-xs sm:text-sm font-medium text-inkBody print-pill">Windows
+                                Administration</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-techEmerald/25 text-xs sm:text-sm font-medium text-inkBody print-pill">Linux
+                                Administration</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-techEmerald/25 text-xs sm:text-sm font-medium text-inkBody print-pill">Networking
+                                Fundamentals</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-techEmerald/25 text-xs sm:text-sm font-medium text-inkBody print-pill">TCP/IP
+                                Configuration</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-techEmerald/25 text-xs sm:text-sm font-medium text-inkBody print-pill">DNS
+                                &amp; DHCP</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-techEmerald/25 text-xs sm:text-sm font-medium text-inkBody print-pill">System
+                                Monitoring</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-techEmerald/25 text-xs sm:text-sm font-medium text-inkBody print-pill">System
+                                Performance Optimisation</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Development & Databases -->
+                    <div class="tech-card rounded-2xl p-6 reveal">
+                        <h3 class="text-lg font-bold text-inkPrimary mb-4 flex items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-techCyan"></span>
+                            <span>Development &amp; Databases</span>
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">Python</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">Database
+                                Management</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">Relational
+                                Database Design</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">SQL
+                                Query Writing</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">Backend
+                                Maintenance</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">Web
+                                Application Debugging</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">Application
+                                Testing</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-sky-400/20 text-xs sm:text-sm font-medium text-inkBody print-pill">Problem
+                                Solving &amp; Debugging</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 4: AI Tools, Digital & Core Strengths -->
+                    <div class="tech-card rounded-2xl p-6 reveal">
+                        <h3 class="text-lg font-bold text-inkPrimary mb-4 flex items-center gap-2.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-techIndigo"></span>
+                            <span>AI Tools, Digital &amp; Core Strengths</span>
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-techIndigo/25 text-xs sm:text-sm font-medium text-inkBody print-pill">Antigravity
+                                IDE</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-techIndigo/25 text-xs sm:text-sm font-medium text-inkBody print-pill">Claude</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-techIndigo/25 text-xs sm:text-sm font-medium text-inkBody print-pill">ChatGPT</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-techIndigo/25 text-xs sm:text-sm font-medium text-inkBody print-pill">GPT6
+                                Astra</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-techIndigo/25 text-xs sm:text-sm font-medium text-inkBody print-pill">SEO</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-techIndigo/25 text-xs sm:text-sm font-medium text-inkBody print-pill">Meta
+                                Ads</span>
+                            <span
+                                class="px-3 py-1.5 rounded-lg bg-obsidian/80 border border-techIndigo/25 text-xs sm:text-sm font-medium text-inkBody print-pill">Quick
+                                Learner &amp; Adaptable</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             5. FEATURED PROJECTS SECTION (2 CLEAN CARDS)
+        ====================================================== -->
+        <section id="projects" class="py-10 sm:py-12">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-6 reveal">
+                    <p class="font-mono text-xs font-semibold uppercase tracking-widest text-techCyan">04 // Systems
+                        Built</p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-inkPrimary mt-1">Featured Projects</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Project 1: Distribution Management System -->
+                    <article class="tech-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between reveal">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <span class="font-mono text-xs text-techCyan">PROJECT // 01</span>
+                                <span class="w-2 h-2 rounded-full bg-techCyan"></span>
+                            </div>
+                            <h3 class="text-xl font-bold text-inkPrimary">Distribution Management System</h3>
+                            <ul class="mt-4 space-y-2.5 text-base text-inkBody leading-relaxed">
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-techCyan shrink-0"></span>
+                                    <span>Developed a business management system with invoice management, user access
+                                        control, database handling, and system troubleshooting.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-techCyan shrink-0"></span>
+                                    <span>Implemented order processing, product management, and client data management
+                                        to streamline business operations.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-sky-400/15">
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-techCyan/10 border border-techCyan/25 font-mono text-xs font-medium text-techCyan print-pill">User
+                                Access Control</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-techCyan/10 border border-techCyan/25 font-mono text-xs font-medium text-techCyan print-pill">Invoice
+                                Management</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-techCyan/10 border border-techCyan/25 font-mono text-xs font-medium text-techCyan print-pill">Database
+                                Handling</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-techCyan/10 border border-techCyan/25 font-mono text-xs font-medium text-techCyan print-pill">System
+                                Troubleshooting</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Apexio Labs -->
+                    <article class="tech-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between reveal">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-3">
+                                <span class="font-mono text-xs text-techEmerald">PROJECT // 02</span>
+                                <span class="w-2 h-2 rounded-full bg-techEmerald"></span>
+                            </div>
+                            <h3 class="text-xl font-bold text-inkPrimary">Apexio Labs</h3>
+                            <ul class="mt-4 space-y-2.5 text-base text-inkBody leading-relaxed">
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-techEmerald shrink-0"></span>
+                                    <span>Built a responsive business platform with admin dashboard, email automation,
+                                        and database management.</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-2.5 w-1.5 h-1.5 rounded-full bg-techEmerald shrink-0"></span>
+                                    <span>Implemented user management, automated workflows, and responsive UI components
+                                        for improved platform usability.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-6 pt-4 border-t border-sky-400/15">
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-techEmerald/10 border border-techEmerald/25 font-mono text-xs font-medium text-techEmerald print-pill">Admin
+                                Dashboard</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-techEmerald/10 border border-techEmerald/25 font-mono text-xs font-medium text-techEmerald print-pill">Email
+                                Automation</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-techEmerald/10 border border-techEmerald/25 font-mono text-xs font-medium text-techEmerald print-pill">Workflows</span>
+                            <span
+                                class="px-2.5 py-1 rounded-md bg-techEmerald/10 border border-techEmerald/25 font-mono text-xs font-medium text-techEmerald print-pill">Responsive
+                                UI</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             6. EDUCATION, CERTIFICATIONS & LANGUAGES (3-COLUMN GRID)
+        ====================================================== -->
+        <section id="credentials" class="py-10 sm:py-12">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-6 reveal">
+                    <p class="font-mono text-xs font-semibold uppercase tracking-widest text-techCyan">05 // Verified
+                        Qualifications</p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-inkPrimary mt-1">Education, Certifications &amp;
+                        Languages</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Column 1: Education Card -->
+                    <div class="tech-card rounded-2xl p-6 flex flex-col justify-between reveal">
+                        <div>
+                            <p class="font-mono text-xs text-techCyan uppercase tracking-wider mb-3">Education</p>
+                            <h3 class="text-lg font-bold text-inkPrimary leading-snug">
+                                Bachelor of Computer Applications (BCA)
+                            </h3>
+                            <p class="text-sm text-inkBody mt-2">Krupanidhi Degree College, Bangalore</p>
+
+                            <div class="mt-4 flex flex-wrap items-center gap-2">
+                                <span
+                                    class="px-2.5 py-1 rounded-md bg-obsidian/80 border border-sky-400/20 font-mono text-xs text-inkMuted print-pill">
+                                    Jan 2022 – Jan 2025
+                                </span>
+                                <span
+                                    class="px-2.5 py-1 rounded-md bg-techCyan/10 border border-techCyan/30 font-mono text-xs font-bold text-techCyan print-pill">
+                                    CGPA: 9.05
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Highlighted Emerald MOFA Attestation Badge -->
+                        <div
+                            class="mt-6 p-3.5 rounded-xl bg-techEmerald/10 border border-techEmerald/35 flex items-start gap-2.5 print-pill">
+                            <svg class="w-5 h-5 text-techEmerald shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                stroke-width="2.2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">
+                                </path>
+                            </svg>
+                            <span class="text-xs sm:text-sm font-semibold text-techEmerald leading-snug">
+                                Attested — MOFA (UAE Ministry of Foreign Affairs)
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Certifications & Awards Card -->
+                    <div class="tech-card rounded-2xl p-6 reveal">
+                        <p class="font-mono text-xs text-techCyan uppercase tracking-wider mb-4">Certifications &amp;
+                            Awards</p>
+                        <ul class="space-y-3">
+                            <li
+                                class="p-3 rounded-xl bg-obsidian/70 border border-sky-400/15 flex items-start justify-between gap-2.5">
+                                <div>
+                                    <p class="text-sm font-semibold text-inkPrimary leading-snug">Python Full Stack
+                                        Internship</p>
+                                    <p class="text-xs text-inkMuted mt-0.5">Inmakes Infotech</p>
+                                </div>
+                                <span class="font-mono text-xs font-semibold text-techCyan shrink-0">2023</span>
+                            </li>
+                            <li
+                                class="p-3 rounded-xl bg-obsidian/70 border border-sky-400/15 flex items-start justify-between gap-2.5">
+                                <div>
+                                    <p class="text-sm font-semibold text-inkPrimary leading-snug">Big Data Analytics</p>
+                                    <p class="text-xs text-inkMuted mt-0.5">Keonics</p>
+                                </div>
+                                <span class="font-mono text-xs font-semibold text-techCyan shrink-0">2025</span>
+                            </li>
+                            <li
+                                class="p-3 rounded-xl bg-obsidian/70 border border-sky-400/15 flex items-start justify-between gap-2.5">
+                                <div>
+                                    <p class="text-sm font-semibold text-inkPrimary leading-snug">Academic Information
+                                        Seeking</p>
+                                    <p class="text-xs text-inkMuted mt-0.5">University of Denmark</p>
+                                </div>
+                                <span class="font-mono text-xs font-semibold text-techCyan shrink-0">2023</span>
+                            </li>
+                            <li
+                                class="p-3 rounded-xl bg-obsidian/70 border border-techEmerald/25 flex items-start justify-between gap-2.5">
+                                <div>
+                                    <p class="text-sm font-semibold text-inkPrimary leading-snug">Best Student Leader
+                                        Award</p>
+                                    <p class="text-xs text-inkMuted mt-0.5">Krupanidhi Degree College</p>
+                                </div>
+                                <span class="font-mono text-xs font-semibold text-techEmerald shrink-0">2025</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 3: Languages Card with Sleek Techy Proficiency Bars -->
+                    <div class="tech-card rounded-2xl p-6 flex flex-col justify-between reveal">
+                        <div>
+                            <p class="font-mono text-xs text-techCyan uppercase tracking-wider mb-4">Languages</p>
+                            <div class="space-y-4">
+                                <!-- English -->
+                                <div>
+                                    <div class="flex items-center justify-between text-sm mb-1.5">
+                                        <span class="font-semibold text-inkPrimary">English</span>
+                                        <span class="font-mono text-xs text-techCyan">Full Professional (C2)</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                                        <div
+                                            class="h-full w-[96%] rounded-full bg-gradient-to-r from-techCyanDeep to-techCyan">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Hindi -->
+                                <div>
+                                    <div class="flex items-center justify-between text-sm mb-1.5">
+                                        <span class="font-semibold text-inkPrimary">Hindi</span>
+                                        <span class="font-mono text-xs text-techCyan">Professional Working (C1)</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                                        <div
+                                            class="h-full w-[86%] rounded-full bg-gradient-to-r from-techCyanDeep to-sky-400">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Malayalam -->
+                                <div>
+                                    <div class="flex items-center justify-between text-sm mb-1.5">
+                                        <span class="font-semibold text-inkPrimary">Malayalam</span>
+                                        <span class="font-mono text-xs text-techEmerald">Native / Bilingual</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                                        <div
+                                            class="h-full w-full rounded-full bg-gradient-to-r from-emerald-600 to-techEmerald">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tamil -->
+                                <div>
+                                    <div class="flex items-center justify-between text-sm mb-1.5">
+                                        <span class="font-semibold text-inkPrimary">Tamil</span>
+                                        <span class="font-mono text-xs text-techIndigo">Conversational (B1–B2)</span>
+                                    </div>
+                                    <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                                        <div
+                                            class="h-full w-[68%] rounded-full bg-gradient-to-r from-indigo-500 to-techIndigo">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="mt-6 pt-4 border-t border-sky-400/15 text-xs text-inkMuted">
+                            Multilingual communication ready for diverse UAE enterprise teams and end-users.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =====================================================
+             7. DIRECT CONTACT SECTION (100% WORKING SUITE)
+        ====================================================== -->
+        <section id="contact" class="py-10 sm:py-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="mb-6 reveal">
+                    <p class="font-mono text-xs font-semibold uppercase tracking-widest text-techCyan">06 // Direct
+                        Communication</p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-inkPrimary mt-1">Contact &amp; Direct Message</h2>
+                    <p class="text-base text-inkMuted mt-1">
+                        Connect directly via Email, Gmail Web, WhatsApp, or Phone for IT Support Engineer roles in the
+                        UAE.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                    <!-- Left Column: Direct Contact Cards with Working Copy Buttons -->
+                    <div class="lg:col-span-5 reveal">
+                        <div class="tech-card rounded-2xl p-6 space-y-4 h-full">
+                            <h3 class="text-lg font-bold text-inkPrimary">Direct Channels</h3>
+
+                            <!-- Email Card -->
+                            <div
+                                class="p-4 rounded-xl bg-obsidian/75 border border-sky-400/15 flex items-center justify-between gap-3">
+                                <div class="min-w-0">
+                                    <p class="font-mono text-[11px] uppercase tracking-wider text-inkMuted">Email</p>
+                                    <a href="mailto:anjoomvkkl@gmail.com"
+                                        class="text-sm font-semibold text-techCyan hover:underline truncate block mt-0.5">
+                                        anjoomvkkl@gmail.com
+                                    </a>
+                                </div>
+                                <button type="button"
+                                    onclick="copyText('anjoomvkkl@gmail.com', 'Copied email to clipboard!')"
+                                    class="no-print px-3 py-1.5 rounded-lg text-xs font-semibold bg-panel hover:bg-techCyan/15 text-inkPrimary hover:text-techCyan border border-sky-400/25 transition-colors shrink-0">
+                                    Copy
+                                </button>
+                            </div>
+
+                            <!-- Phone / WhatsApp Card -->
+                            <div class="p-4 rounded-xl bg-obsidian/75 border border-sky-400/15 space-y-3">
+                                <div class="flex items-center justify-between gap-3">
+                                    <div class="min-w-0">
+                                        <p class="font-mono text-[11px] uppercase tracking-wider text-inkMuted">Phone /
+                                            WhatsApp</p>
+                                        <a href="tel:+971543736442"
+                                            class="text-sm font-semibold text-inkPrimary hover:text-techCyan block mt-0.5">
+                                            +971 543736442
+                                        </a>
+                                    </div>
+                                    <button type="button"
+                                        onclick="copyText('+971 543736442', 'Copied phone number to clipboard!')"
+                                        class="no-print px-3 py-1.5 rounded-lg text-xs font-semibold bg-panel hover:bg-techCyan/15 text-inkPrimary hover:text-techCyan border border-sky-400/25 transition-colors shrink-0">
+                                        Copy
+                                    </button>
+                                </div>
+                                <div class="grid grid-cols-2 gap-2 no-print">
+                                    <a href="tel:+971543736442"
+                                        class="text-center py-2 px-3 rounded-lg text-xs font-semibold bg-panel hover:bg-slate-800 text-inkPrimary border border-sky-400/20 transition-colors">
+                                        Call Now
+                                    </a>
+                                    <a href="https://wa.me/971543736442?text=Hello%20Mohammed%2C%20I%20viewed%20your%20IT%20Support%20Engineer%20portfolio%20and%20would%20like%20to%20connect."
+                                        target="_blank" rel="noopener noreferrer"
+                                        class="text-center py-2 px-3 rounded-lg text-xs font-semibold bg-techEmerald/15 hover:bg-techEmerald text-techEmerald hover:text-obsidian border border-techEmerald/30 transition-colors">
+                                        WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- LinkedIn Card -->
+                            <div
+                                class="p-4 rounded-xl bg-obsidian/75 border border-sky-400/15 flex items-center justify-between gap-3">
+                                <div class="min-w-0">
+                                    <p class="font-mono text-[11px] uppercase tracking-wider text-inkMuted">LinkedIn</p>
+                                    <a href="https://www.linkedin.com/in/mohammed-anjoom-343929229" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="text-sm font-semibold text-techIndigo hover:underline truncate block mt-0.5">
+                                        linkedin.com/in/mohammed-anjoom-343929229
+                                    </a>
+                                </div>
+                                <a href="https://www.linkedin.com/in/mohammed-anjoom-343929229" target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="no-print px-3 py-1.5 rounded-lg text-xs font-semibold bg-panel hover:bg-techIndigo/20 text-inkPrimary hover:text-techIndigo border border-sky-400/25 transition-colors shrink-0">
+                                    Open
+                                </a>
+                            </div>
+
+                            <!-- Location Card -->
+                            <div class="p-4 rounded-xl bg-techEmerald/10 border border-techEmerald/25">
+                                <p class="font-mono text-[11px] uppercase tracking-wider text-techEmerald">Location
+                                    &amp; Readiness</p>
+                                <p class="text-sm font-semibold text-inkPrimary mt-1">Abu Dhabi, UAE • Visit Visa •
+                                    Available Immediately</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Working Direct Message Composer -->
+                    <div class="lg:col-span-7 reveal no-print">
+                        <div class="tech-card rounded-2xl p-6 sm:p-7 h-full">
+                            <h3 class="text-lg font-bold text-inkPrimary">Send a Direct Message</h3>
+                            <p class="text-sm text-inkMuted mt-1 mb-5">
+                                Fill in the form below and choose how you prefer to send—Email App, Gmail in your
+                                browser, WhatsApp, or one-click copy.
+                            </p>
+
+                            <form id="message-composer" class="space-y-4" novalidate>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="input-name" class="block font-mono text-xs text-inkBody mb-1.5">Your
+                                            Name *</label>
+                                        <input id="input-name" type="text" required placeholder="e.g., Sarah Al Hashimi"
+                                            class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian/90 border border-sky-400/25 text-sm text-inkPrimary placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-techCyan/35 focus:border-techCyan transition-all">
+                                        <p id="err-name" class="hidden mt-1 text-xs text-rose-400">Please enter your
+                                            name.</p>
+                                    </div>
+                                    <div>
+                                        <label for="input-email"
+                                            class="block font-mono text-xs text-inkBody mb-1.5">Your Email *</label>
+                                        <input id="input-email" type="email" required placeholder="recruiter@company.ae"
+                                            class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian/90 border border-sky-400/25 text-sm text-inkPrimary placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-techCyan/35 focus:border-techCyan transition-all">
+                                        <p id="err-email" class="hidden mt-1 text-xs text-rose-400">Please enter a valid
+                                            email address.</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="input-subject"
+                                        class="block font-mono text-xs text-inkBody mb-1.5">Subject *</label>
+                                    <input id="input-subject" type="text" required
+                                        value="IT Support Engineer Opportunity" placeholder="Enter subject"
+                                        class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian/90 border border-sky-400/25 text-sm text-inkPrimary placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-techCyan/35 focus:border-techCyan transition-all">
+                                    <p id="err-subject" class="hidden mt-1 text-xs text-rose-400">Please enter a
+                                        subject.</p>
+
+                                    <!-- Quick Subject Presets -->
+                                    <div class="flex flex-wrap items-center gap-1.5 mt-2">
+                                        <span class="font-mono text-[11px] text-inkMuted mr-1">Presets:</span>
+                                        <button type="button" data-preset="IT Support Engineer Opportunity"
+                                            class="subject-preset px-2.5 py-1 rounded-md text-xs font-medium bg-obsidian/80 hover:bg-techCyan/15 text-inkBody hover:text-techCyan border border-sky-400/20 transition-colors">
+                                            IT Support Role
+                                        </button>
+                                        <button type="button" data-preset="Interview Invitation — Mohammed Anjoom V"
+                                            class="subject-preset px-2.5 py-1 rounded-md text-xs font-medium bg-obsidian/80 hover:bg-techCyan/15 text-inkBody hover:text-techCyan border border-sky-400/20 transition-colors">
+                                            Interview Invitation
+                                        </button>
+                                        <button type="button" data-preset="Technical Inquiry"
+                                            class="subject-preset px-2.5 py-1 rounded-md text-xs font-medium bg-obsidian/80 hover:bg-techCyan/15 text-inkBody hover:text-techCyan border border-sky-400/20 transition-colors">
+                                            Technical Inquiry
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="input-message"
+                                        class="block font-mono text-xs text-inkBody mb-1.5">Message *</label>
+                                    <textarea id="input-message" rows="4" required
+                                        placeholder="Share role details, interview availability, or any questions..."
+                                        class="w-full px-3.5 py-2.5 rounded-xl bg-obsidian/90 border border-sky-400/25 text-sm text-inkPrimary placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-techCyan/35 focus:border-techCyan transition-all resize-y"></textarea>
+                                    <p id="err-message" class="hidden mt-1 text-xs text-rose-400">Please enter a message
+                                        (at least 6 characters).</p>
+                                </div>
+
+                                <!-- 4 Reliable Working Send / Fallback Actions -->
+                                <div class="pt-1 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+
+
+                                    <!-- 2. Send via Gmail Web -->
+                                    <button type="button" id="btn-send-gmail"
+                                        class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-techCyan bg-techCyan/10 hover:bg-techCyan hover:text-obsidian border border-techCyan/35 transition-all">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9">
+                                            </path>
+                                        </svg>
+                                        <span>Send via Gmail Web</span>
+                                    </button>
+
+                                    <!-- 3. Send via WhatsApp -->
+                                    <button type="button" id="btn-send-whatsapp"
+                                        class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-techEmerald bg-techEmerald/10 hover:bg-techEmerald hover:text-obsidian border border-techEmerald/35 transition-all">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                            </path>
+                                        </svg>
+                                        <span>Send via WhatsApp</span>
+                                    </button>
+
+                                    <!-- 4. Copy Message -->
+                                    <button type="button" id="btn-copy-message"
+                                        class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold text-inkBody hover:text-inkPrimary bg-obsidian/80 hover:bg-slate-800 border border-sky-400/20 transition-all">
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+                                            </path>
+                                        </svg>
+                                        <span>Copy Message</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================================
+         CLEAN MINIMAL FOOTER
+    ========================================================== -->
+    <footer class="relative z-10 border-t border-sky-400/15 bg-obsidian/90 backdrop-blur-md py-8">
+        <div
+            class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-inkMuted">
+            <p>© 2026 Mohammed Anjoom V — IT Support Engineer • Abu Dhabi, UAE</p>
+            <a href="#top"
+                class="no-print inline-flex items-center gap-1.5 font-mono text-xs text-techCyan hover:text-cyan-300 transition-colors">
+                <span>Back to top</span>
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"></path>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <!-- =========================================================
+         TOAST NOTIFICATION CONTAINER (NO ALERT / CONFIRM)
+    ========================================================== -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"
+        aria-live="polite"></div>
+
+    <!-- =========================================================
+         JAVASCRIPT: ALWAYS-ON TECH KEYWORDS CANVAS, CONTACT & UI
+    ========================================================== -->
+    <script>
+        (function () {
+            'use strict';
+
+            /* ---------------------------------------------------------
+             * 1. NON-INTRUSIVE TOAST NOTIFICATIONS
+             * --------------------------------------------------------- */
+            function showToast(message, isError = false) {
+                const container = document.getElementById('toast-container');
+                if (!container) return;
+
+                const toast = document.createElement('div');
+                toast.className = [
+                    'pointer-events-auto flex items-center gap-2.5 px-4 py-3 rounded-xl shadow-xl border text-sm font-medium backdrop-blur-md',
+                    'transition-all duration-300 transform translate-y-2 opacity-0',
+                    isError
+                        ? 'bg-rose-950/95 text-rose-200 border-rose-500/40'
+                        : 'bg-panel/95 text-inkPrimary border-techCyan/40'
+                ].join(' ');
+
+                toast.innerHTML = `
+                    <span class="w-2 h-2 rounded-full ${isError ? 'bg-rose-400' : 'bg-techEmerald'} shrink-0"></span>
+                    <span>${message}</span>
+                `;
+
+                container.appendChild(toast);
+                requestAnimationFrame(() => toast.classList.remove('translate-y-2', 'opacity-0'));
+
+                setTimeout(() => {
+                    toast.classList.add('translate-y-2', 'opacity-0');
+                    setTimeout(() => toast.remove(), 300);
+                }, 3200);
+            }
+
+            /* ---------------------------------------------------------
+             * 2. RELIABLE CLIPBOARD COPY HELPER (IFRAME-SAFE)
+             * --------------------------------------------------------- */
+            function copyWithExecCommand(text) {
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                textarea.setAttribute('readonly', '');
+                textarea.style.position = 'fixed';
+                textarea.style.left = '-9999px';
+                textarea.style.top = '0';
+                document.body.appendChild(textarea);
+                textarea.select();
+                textarea.setSelectionRange(0, 99999);
+                let success = false;
+                try {
+                    success = document.execCommand('copy');
+                } catch (err) {
+                    success = false;
+                }
+                document.body.removeChild(textarea);
+                return success;
+            }
+
+            window.copyText = function (text, confirmationMessage) {
+                const msg = confirmationMessage || 'Copied to clipboard!';
+                if (copyWithExecCommand(text)) {
+                    showToast(msg);
+                    return;
+                }
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    navigator.clipboard.writeText(text)
+                        .then(() => showToast(msg))
+                        .catch(() => showToast('Copy failed. Please select and copy manually.', true));
+                } else {
+                    showToast('Copy failed. Please select and copy manually.', true);
+                }
+            };
+
+            /* ---------------------------------------------------------
+             * 3. ALWAYS-ON FLOATING TECHNICAL KEYWORDS BACKGROUND CANVAS
+             *    - 38 IT & Software keywords across 3 parallax depth layers
+             *    - Always running smoothly by default (no pause/play UI)
+             *    - Retina DPR scaling & responsive resize handling
+             * --------------------------------------------------------- */
+            const canvas = document.getElementById('tech-bg-canvas');
+            const ctx = canvas ? canvas.getContext('2d') : null;
+
+            const TECH_KEYWORDS = [
+                'Python', 'CSS', 'HTML', 'DNS', 'TCP/IP', 'DHCP', 'SQL',
+                'Linux', 'Windows', 'RDP', 'Helpdesk', 'SLA', 'ITSM',
+                'Firewall', 'LAN / WAN', 'SSH', 'Active Directory',
+                'PostgreSQL', 'REST API', 'Debugging', 'SysAdmin',
+                'Network', 'Backup', 'Ticketing', 'Troubleshooting',
+                'Monitoring', 'Cloud', 'Patching', 'Database', 'JSON',
+                'HTTP/S', 'VPN', 'PowerShell', 'Bash', 'Subnets',
+                'Latency', 'Uptime', 'Endpoint'
+            ];
+
+            // 3 parallax depth layers: back (slow/faint), mid, front (slightly faster/clearer)
+            const DEPTH_LAYERS = [
+                { minSize: 12, maxSize: 13, minSpeed: 0.18, maxSpeed: 0.28, minAlpha: 0.070, maxAlpha: 0.095 },
+                { minSize: 15, maxSize: 17, minSpeed: 0.30, maxSpeed: 0.44, minAlpha: 0.095, maxAlpha: 0.125 },
+                { minSize: 19, maxSize: 22, minSpeed: 0.48, maxSpeed: 0.64, minAlpha: 0.125, maxAlpha: 0.160 }
+            ];
+
+            // Refined techy accent colors for floating words
+            const TECH_COLORS = ['#22D3EE', '#10B981', '#60A5FA'];
+
+            let particles = [];
+            let width = window.innerWidth;
+            let height = window.innerHeight;
+            let rafId = null;
+
+            function rand(min, max) {
+                return min + Math.random() * (max - min);
+            }
+
+            function initParticles() {
+                // Keep all 38 keywords active on desktop and cleanly balanced on smaller viewports
+                const count = width < 640 ? 28 : TECH_KEYWORDS.length;
+                particles = [];
+
+                for (let i = 0; i < count; i++) {
+                    const layer = DEPTH_LAYERS[i % DEPTH_LAYERS.length];
+                    const word = TECH_KEYWORDS[i % TECH_KEYWORDS.length];
+                    const fontSize = Math.round(rand(layer.minSize, layer.maxSize));
+
+                    // Evenly stagger starting positions across the entire screen
+                    const colSpacing = width / count;
+                    const x = ((colSpacing * i + rand(-50, 50)) % width + width) % width;
+                    const y = rand(32, Math.max(80, height - 32));
+
+                    particles.push({
+                        text: word,
+                        x: x,
+                        y: y,
+                        vx: rand(layer.minSpeed, layer.maxSpeed),
+                        vy: rand(-0.07, 0.07), // Gentle diagonal drift
+                        fontSize: fontSize,
+                        baseAlpha: rand(layer.minAlpha, layer.maxAlpha),
+                        color: TECH_COLORS[i % TECH_COLORS.length],
+                        approxWidth: word.length * fontSize * 0.62
+                    });
+                }
+            }
+
+            function resizeCanvas() {
+                if (!canvas || !ctx) return;
+                const dpr = Math.min(window.devicePixelRatio || 1, 2);
+                width = window.innerWidth;
+                height = window.innerHeight;
+
+                canvas.width = Math.floor(width * dpr);
+                canvas.height = Math.floor(height * dpr);
+                canvas.style.width = width + 'px';
+                canvas.style.height = height + 'px';
+
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                initParticles();
+            }
+
+            function renderBackgroundFrame() {
+                if (!ctx) return;
+                ctx.clearRect(0, 0, width, height);
+                ctx.textBaseline = 'middle';
+
+                const edgeFadeX = Math.min(140, width * 0.14);
+                const edgeFadeY = Math.min(75, height * 0.10);
+
+                for (let i = 0; i < particles.length; i++) {
+                    const p = particles[i];
+
+                    // Advance position smoothly
+                    p.x += p.vx;
+                    p.y += p.vy;
+
+                    // Wrap seamlessly around viewport edges
+                    if (p.x > width + 36) {
+                        p.x = -p.approxWidth - 36;
+                        p.y = rand(32, Math.max(80, height - 32));
+                    }
+                    if (p.y < -24) {
+                        p.y = height + 20;
+                    } else if (p.y > height + 24) {
+                        p.y = -20;
+                    }
+
+                    // Smooth soft opacity fade near all 4 screen boundaries
+                    let xFactor = 1;
+                    if (p.x < edgeFadeX) {
+                        xFactor = Math.max(0, (p.x + p.approxWidth) / (edgeFadeX + p.approxWidth));
+                    } else if (p.x > width - edgeFadeX) {
+                        xFactor = Math.max(0, (width - p.x) / edgeFadeX);
+                    }
+
+                    let yFactor = 1;
+                    if (p.y < edgeFadeY) {
+                        yFactor = Math.max(0, p.y / edgeFadeY);
+                    } else if (p.y > height - edgeFadeY) {
+                        yFactor = Math.max(0, (height - p.y) / edgeFadeY);
+                    }
+
+                    const alpha = p.baseAlpha * xFactor * yFactor;
+                    if (alpha <= 0.002) continue;
+
+                    ctx.font = `500 ${p.fontSize}px "JetBrains Mono", "Fira Code", ui-monospace, monospace`;
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = alpha;
+                    ctx.fillText(p.text, p.x, p.y);
+                }
+
+                ctx.globalAlpha = 1;
+                rafId = requestAnimationFrame(renderBackgroundFrame);
+            }
+
+            // Debounced resize handler so canvas stays razor sharp
+            let resizeTimer = null;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(resizeCanvas, 120);
+            });
+
+            // Start always-on background animation cleanly on window load
+            window.addEventListener('load', () => {
+                resizeCanvas();
+                if (rafId) cancelAnimationFrame(rafId);
+                renderBackgroundFrame();
+            });
+
+            /* ---------------------------------------------------------
+             * 4. MOBILE NAVIGATION TOGGLE
+             * --------------------------------------------------------- */
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
+
+            function setMobileMenu(open) {
+                if (!mobileMenu || !mobileMenuBtn) return;
+                mobileMenu.classList.toggle('hidden', !open);
+                mobileMenuBtn.setAttribute('aria-expanded', String(open));
+                if (iconOpen && iconClose) {
+                    iconOpen.classList.toggle('hidden', open);
+                    iconClose.classList.toggle('hidden', !open);
+                }
+            }
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    const isHidden = mobileMenu.classList.contains('hidden');
+                    setMobileMenu(isHidden);
+                });
+            }
+
+            document.querySelectorAll('.mobile-link').forEach((link) => {
+                link.addEventListener('click', () => setMobileMenu(false));
+            });
+
+            /* ---------------------------------------------------------
+             * 5. DIRECT MESSAGE COMPOSER (MAILTO, GMAIL WEB, WHATSAPP, COPY)
+             * --------------------------------------------------------- */
+            const RECIPIENT_EMAIL = 'anjoomvkkl@gmail.com';
+            const WHATSAPP_NUMBER = '971543736442';
+
+            const nameEl = document.getElementById('input-name');
+            const emailEl = document.getElementById('input-email');
+            const subjectEl = document.getElementById('input-subject');
+            const messageEl = document.getElementById('input-message');
+
+            const errName = document.getElementById('err-name');
+            const errEmail = document.getElementById('err-email');
+            const errSubject = document.getElementById('err-subject');
+            const errMessage = document.getElementById('err-message');
+
+            // Subject quick preset buttons
+            document.querySelectorAll('.subject-preset').forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    if (subjectEl) {
+                        subjectEl.value = btn.getAttribute('data-preset') || '';
+                        errSubject.classList.add('hidden');
+                    }
+                });
+            });
+
+            function validateAndBuildMessage() {
+                const name = nameEl.value.trim();
+                const email = emailEl.value.trim();
+                const subject = subjectEl.value.trim();
+                const message = messageEl.value.trim();
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                let isValid = true;
+
+                if (name.length < 2) {
+                    errName.classList.remove('hidden');
+                    isValid = false;
+                } else {
+                    errName.classList.add('hidden');
+                }
+
+                if (!emailRegex.test(email)) {
+                    errEmail.classList.remove('hidden');
+                    isValid = false;
+                } else {
+                    errEmail.classList.add('hidden');
+                }
+
+                if (subject.length < 2) {
+                    errSubject.classList.remove('hidden');
+                    isValid = false;
+                } else {
+                    errSubject.classList.add('hidden');
+                }
+
+                if (message.length < 6) {
+                    errMessage.classList.remove('hidden');
+                    isValid = false;
+                } else {
+                    errMessage.classList.add('hidden');
+                }
+
+                if (!isValid) {
+                    showToast('Please complete all required fields first.', true);
+                    return null;
+                }
+
+                const formattedBody = [
+                    'Hello Mohammed Anjoom V,',
+                    '',
+                    message,
+                    '',
+                    '---',
+                    `From: ${name}`,
+                    `Reply Email: ${email}`
+                ].join('\n');
+
+                return { name, email, subject, message, formattedBody };
+            }
+
+            // Action 1: Send via Default Email App (mailto:)
+            const btnMailto = document.getElementById('btn-send-mailto');
+            if (btnMailto) {
+                btnMailto.addEventListener('click', () => {
+                    const data = validateAndBuildMessage();
+                    if (!data) return;
+
+                    const mailtoUrl = `mailto:${RECIPIENT_EMAIL}?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(data.formattedBody)}`;
+                    showToast('Opening your email app...');
+                    try {
+                        window.location.href = mailtoUrl;
+                    } catch (err) {
+                        showToast('Could not open email app. Try "Send via Gmail Web" or "Copy Message".', true);
+                    }
+                });
+            }
+
+            // Action 2: Send via Gmail Web (works in any browser without local mail client setup)
+            const btnGmail = document.getElementById('btn-send-gmail');
+            if (btnGmail) {
+                btnGmail.addEventListener('click', () => {
+                    const data = validateAndBuildMessage();
+                    if (!data) return;
+
+                    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(RECIPIENT_EMAIL)}&su=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(data.formattedBody)}`;
+                    window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+                    showToast('Opening Gmail Web composer in a new tab...');
+                });
+            }
+
+            // Action 3: Send via WhatsApp
+            const btnWhatsApp = document.getElementById('btn-send-whatsapp');
+            if (btnWhatsApp) {
+                btnWhatsApp.addEventListener('click', () => {
+                    const data = validateAndBuildMessage();
+                    if (!data) return;
+
+                    const waText = [
+                        'Hello Mohammed Anjoom V,',
+                        `Subject: ${data.subject}`,
+                        '',
+                        data.message,
+                        '',
+                        `From: ${data.name} (${data.email})`
+                    ].join('\n');
+
+                    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
+                    window.open(waUrl, '_blank', 'noopener,noreferrer');
+                    showToast('Opening WhatsApp in a new tab...');
+                });
+            }
+
+            // Action 4: Copy Formatted Message to Clipboard
+            const btnCopyMsg = document.getElementById('btn-copy-message');
+            if (btnCopyMsg) {
+                btnCopyMsg.addEventListener('click', () => {
+                    const data = validateAndBuildMessage();
+                    if (!data) return;
+
+                    const fullPayload = [
+                        `To: ${RECIPIENT_EMAIL}`,
+                        `Subject: ${data.subject}`,
+                        '',
+                        data.formattedBody
+                    ].join('\n');
+
+                    window.copyText(fullPayload, 'Copied formatted message to clipboard!');
+                });
+            }
+
+            /* ---------------------------------------------------------
+             * 6. SMOOTH SCROLL REVEAL FOR CARDS
+             * --------------------------------------------------------- */
+            const revealEls = document.querySelectorAll('.reveal');
+            if ('IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries, obs) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            obs.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.08 });
+
+                revealEls.forEach((el) => observer.observe(el));
+            } else {
+                revealEls.forEach((el) => el.classList.add('visible'));
+            }
+        })();
+    </script>
+</body>
+
+</html>
